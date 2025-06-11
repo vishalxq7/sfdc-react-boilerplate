@@ -1,0 +1,82 @@
+{
+  "categories": [
+    { "id": "top-core", "name": "Top Core Price List" },
+    { "id": "core", "name": "Core Price List" },
+    { "id": "mc", "name": "MC Price List" },
+    { "id": "sfdc-core", "name": "SFDO Core Price List" },
+    { "id": "sfdc-mc", "name": "SFDO MC Price List" },
+    { "id": "mulesoft", "name": "MuleSoft Price List" },
+    { "id": "tableau", "name": "Tableau Price List" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "categoryId": "mulesoft",
+      "name": "Automation",
+      "currency": "USD",
+      "price": 100,
+      "filters": ["Gold", "Advanced"]
+    },
+    {
+      "id": 2,
+      "categoryId": "mulesoft",
+      "name": "Flow Automation",
+      "currency": "EUR",
+      "price": 90,
+      "filters": ["Platinum", "Starter"]
+    },
+    {
+      "id": 3,
+      "categoryId": "tableau",
+      "name": "Tableau Creator",
+      "currency": "USD",
+      "price": 120,
+      "filters": ["Gold", "Starter"]
+    },
+    {
+      "id": 4,
+      "categoryId": "core",
+      "name": "Core Analytics",
+      "currency": "INR",
+      "price": 8000,
+      "filters": ["Platinum", "Advanced"]
+    },
+    {
+      "id": 5,
+      "categoryId": "mc",
+      "name": "Marketing Cloud Pro",
+      "currency": "GBP",
+      "price": 75,
+      "filters": ["Titanium", "Gold"]
+    },
+    {
+      "id": 6,
+      "categoryId": "sfdc-core",
+      "name": "Salesforce Core License",
+      "currency": "USD",
+      "price": 150,
+      "filters": ["Starter"]
+    },
+    {
+      "id": 7,
+      "categoryId": "sfdc-mc",
+      "name": "SFDO MC Advanced",
+      "currency": "EUR",
+      "price": 110,
+      "filters": ["Advanced", "Platinum"]
+    }
+  ],
+  "currencies": [
+    { "id": "USD", "name": "USD" },
+    { "id": "EUR", "name": "EUR" },
+    { "id": "INR", "name": "INR" },
+    { "id": "GBP", "name": "GBP" }
+  ],
+  "filters": [
+    { "id": "Gold", "name": "Gold" },
+    { "id": "Platinum", "name": "Platinum" },
+    { "id": "Titanium", "name": "Titanium" },
+    { "id": "Starter", "name": "Starter" },
+    { "id": "Advanced", "name": "Advanced" }
+  ]
+}

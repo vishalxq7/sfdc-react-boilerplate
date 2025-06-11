@@ -1,0 +1,53 @@
+/* Root Variables */
+:root {
+	--font-family: 'Segoe UI', sans-serif;
+	--bg-color: #f5f7fa;
+	--text-color: #333;
+	--primary-color: #0d6efd;
+	--border-radius: 8px;
+	--sidebar-width: 240px;
+	--header-height: 60px;
+	--font-size-base: 16px; /* global default */
+}
+
+/* Global Reset & Box Model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Base Body Style */
+body {
+	font-family: var(--font-family);
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	height: 100vh;
+	overflow-x: hidden;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+/* App Root Layout */
+#root {
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	/* height: 100vh;
+	width: 100vw; */
+	margin: 0 auto;
+}
+
+/* Scrollbar Styling (optional) */
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #eee;
+}
+::-webkit-scrollbar-thumb {
+	background-color: var(--primary-color);
+	/* border-radius: 6px; */
+}
