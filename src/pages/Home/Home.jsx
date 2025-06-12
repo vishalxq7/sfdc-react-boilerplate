@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './Home.css';
 import { useTitle } from '../../hooks';
 import { fetchCategoryData } from '../../services/categoryApi';
+import { Loader } from '../../components';
 
 export const Home = () => {
 	useTitle('Home');
@@ -26,8 +27,13 @@ export const Home = () => {
 		fetchData();
 	}, []);
 
-	if (loading) return <div>Loading...</div>;
-	if (error) return <div>Error: {error}</div>;
+	if (loading) {
+		return <Loader />;
+	}
+
+	if (error) {
+		return <div>Error: {error}</div>;
+	}
 
 	return (
 		<div className="pt-4">

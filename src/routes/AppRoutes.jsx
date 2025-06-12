@@ -1,5 +1,13 @@
 import { Route, Routes, useNavigate } from 'react-router';
-import { Contact, Dashboard, Home, Login, NotFound, Profile } from '../pages';
+import {
+	Cart,
+	Contact,
+	Dashboard,
+	Home,
+	Login,
+	NotFound,
+	Profile,
+} from '../pages';
 import MainLayout from '../layouts/MainLayout';
 import ProtectedRoute from './ProtectedRoute';
 
@@ -8,6 +16,8 @@ import { Security, LoginCallback } from '@okta/okta-react';
 import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import { AuthProvider } from '../context/AuthContext';
 import { oktaConfig } from '../utils/oktaConfig';
+import { Provider } from 'react-redux';
+import store from '../store';
 
 const AppRoutes = () => {
 	const navigate = useNavigate();
@@ -23,25 +33,28 @@ const AppRoutes = () => {
 	return (
 		<Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
 			<AuthProvider>
-				<Routes>
-					<Route element={<MainLayout />}>
-						<Route path="/login" element={<Login />} />
-						<Route path="/login/callback" element={<LoginCallback />} />
+				<Provider store={store}>
+					<Routes>
+						<Route element={<MainLayout />}>
+							<Route path="/login" element={<Login />} />
+							<Route path="/login/callback" element={<LoginCallback />} />
 
-						<Route path="/" element={<Home />} />
-						<Route path="/contact" element={<Contact />} />
-						<Route path="/dashboard" element={<Dashboard />} />
-						<Route path="/profile" element={<Profile />} />
+							<Route path="/" element={<Home />} />
+							<Route path="/contact" element={<Contact />} />
+							<Route path="/dashboard" element={<Dashboard />} />
+							<Route path="/profile" element={<Profile />} />
+							<Route path="/cart" element={<Cart />} />
 
-						{/* <Route element={<ProtectedRoute />}>
+							{/* <Route element={<ProtectedRoute />}>
 							<Route path="/" element={<Home />} />
 							<Route path="/contact" element={<Contact />} />
 							<Route path="/dashboard" element={<Dashboard />} />
 							<Route path="/profile" element={<Profile />} />
 						</Route> */}
-					</Route>
-					<Route path="*" element={<NotFound />} />
-				</Routes>
+						</Route>
+						<Route path="*" element={<NotFound />} />
+					</Routes>
+				</Provider>
 			</AuthProvider>
 		</Security>
 	);

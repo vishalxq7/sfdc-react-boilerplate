@@ -47,6 +47,11 @@ export const Header = () => {
 							Dashboard
 						</NavLink>
 					</li>
+					<li className="nav-item">
+						<NavLink className="nav-link" to={`/cart`}>
+							Cart
+						</NavLink>
+					</li>
 				</ul>
 				<ul
 					className="navbar-nav ms-auto flex-row align-items-center"

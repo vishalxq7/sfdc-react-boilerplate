@@ -5,3 +5,4 @@ export { Dashboard } from './Dashboard/Dashboard';
 export { Contact } from './Contact/Contact';
 export { Login } from './Login/Login';
 export { Profile } from './Profile/Profile';
+export { Cart } from './Cart/Cart';
