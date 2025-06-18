@@ -1,82 +1,510 @@
 {
-  "categories": [
-    { "id": "top-core", "name": "Top Core Price List" },
-    { "id": "core", "name": "Core Price List" },
-    { "id": "mc", "name": "MC Price List" },
-    { "id": "sfdc-core", "name": "SFDO Core Price List" },
-    { "id": "sfdc-mc", "name": "SFDO MC Price List" },
-    { "id": "mulesoft", "name": "MuleSoft Price List" },
-    { "id": "tableau", "name": "Tableau Price List" }
-  ],
-  "products": [
-    {
-      "id": 1,
-      "categoryId": "mulesoft",
-      "name": "Automation",
-      "currency": "USD",
-      "price": 100,
-      "filters": ["Gold", "Advanced"]
-    },
-    {
-      "id": 2,
-      "categoryId": "mulesoft",
-      "name": "Flow Automation",
-      "currency": "EUR",
-      "price": 90,
-      "filters": ["Platinum", "Starter"]
-    },
-    {
-      "id": 3,
-      "categoryId": "tableau",
-      "name": "Tableau Creator",
-      "currency": "USD",
-      "price": 120,
-      "filters": ["Gold", "Starter"]
-    },
-    {
-      "id": 4,
-      "categoryId": "core",
-      "name": "Core Analytics",
-      "currency": "INR",
-      "price": 8000,
-      "filters": ["Platinum", "Advanced"]
-    },
-    {
-      "id": 5,
-      "categoryId": "mc",
-      "name": "Marketing Cloud Pro",
-      "currency": "GBP",
-      "price": 75,
-      "filters": ["Titanium", "Gold"]
-    },
-    {
-      "id": 6,
-      "categoryId": "sfdc-core",
-      "name": "Salesforce Core License",
-      "currency": "USD",
-      "price": 150,
-      "filters": ["Starter"]
-    },
-    {
-      "id": 7,
-      "categoryId": "sfdc-mc",
-      "name": "SFDO MC Advanced",
-      "currency": "EUR",
-      "price": 110,
-      "filters": ["Advanced", "Platinum"]
-    }
-  ],
-  "currencies": [
-    { "id": "USD", "name": "USD" },
-    { "id": "EUR", "name": "EUR" },
-    { "id": "INR", "name": "INR" },
-    { "id": "GBP", "name": "GBP" }
-  ],
-  "filters": [
-    { "id": "Gold", "name": "Gold" },
-    { "id": "Platinum", "name": "Platinum" },
-    { "id": "Titanium", "name": "Titanium" },
-    { "id": "Starter", "name": "Starter" },
-    { "id": "Advanced", "name": "Advanced" }
-  ]
+	"categories": [
+		{
+			"id": 1,
+			"slug": "top-core",
+			"name": "Top Core Price List",
+			"description": "Top Core Price List for all products"
+		},
+		{
+			"id": 2,
+			"slug": "top-mc",
+			"name": "Top MC Price List",
+			"description": "Top MC Price List for all products"
+		},
+		{
+			"id": 3,
+			"slug": "top-sfdc-core",
+			"name": "Top SFDO Core Price List",
+			"description": "Top SFDO Core Price List for all products"
+		},
+		{
+			"id": 4,
+			"slug": "top-sfdc-mc",
+			"name": "Top SFDO MC Price List",
+			"description": "Top SFDO MC Price List for all products"
+		},
+		{
+			"id": 5,
+			"slug": "top-mulesoft",
+			"name": "Top MuleSoft Price List",
+			"description": "Top MuleSoft Price List for all products"
+		},
+		{
+			"id": 6,
+			"slug": "top-tableau",
+			"name": "Top Tableau Price List",
+			"description": "Top Tableau Price List for all products"
+		}
+	],
+	"currencies": [
+		{
+			"id": 1,
+			"code": "USD",
+			"name": "US Dollar",
+			"symbol": "$",
+			"exchange_rate": 1.0,
+			"is_active": true
+		},
+		{
+			"id": 2,
+			"code": "INR",
+			"name": "Indian Rupee",
+			"symbol": "₹",
+			"exchange_rate": 83.2,
+			"is_active": true
+		},
+		{
+			"id": 3,
+			"code": "EUR",
+			"name": "Euro",
+			"symbol": "€",
+			"exchange_rate": 0.92,
+			"is_active": true
+		},
+		{
+			"id": 4,
+			"code": "JPY",
+			"name": "Japanese Yen",
+			"symbol": "¥",
+			"exchange_rate": 155.0,
+			"is_active": true
+		},
+		{
+			"id": 5,
+			"code": "GBP",
+			"name": "British Pound",
+			"symbol": "£",
+			"exchange_rate": 0.79,
+			"is_active": true
+		}
+	],
+	"products": [
+		{
+			"id": 1,
+			"sku": "BEA-ESS-ESS-001",
+			"category": "Top Core Price List",
+			"categoryId": "1",
+			"name": "Automation",
+			"currency": "USD",
+			"description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"discount": 1,
+			"imageUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"thumbnailUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"serviceType": "Subscription",
+			"serviceDuration": "1 Year",
+			"monthlyPrice": 100,
+			"annualPrice": 1000,
+			"tags": ["Gold", "Advanced"],
+			"createdAt": "2025-04-30T09:41:02.053Z",
+			"updatedAt": "2025-04-30T09:41:02.053Z",
+			"productDiscountMatrix": [
+				{
+					"subscribers": "1–9",
+					"level_0": "2.45%",
+					"level_1": "15.67%",
+					"level_2": "25.22%",
+					"level_3": "28.11%",
+					"level_4": "30.11%"
+				},
+				{
+					"subscribers": "10–24",
+					"level_0": "7.11%",
+					"level_1": "18.11%",
+					"level_2": "25.45%",
+					"level_3": "31.56%",
+					"level_4": "40.11%"
+				},
+				{
+					"subscribers": "25–49",
+					"level_0": "9.78%",
+					"level_1": "13.22%",
+					"level_2": "19.33%",
+					"level_3": "27.89%",
+					"level_4": "34%"
+				},
+				{
+					"subscribers": "50–99",
+					"level_0": "15.67%",
+					"level_1": "18.67%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48.78%"
+				},
+				{
+					"subscribers": "100–199",
+					"level_0": "15.67%",
+					"level_1": "26.76%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48%"
+				},
+				{
+					"subscribers": "200–499",
+					"level_0": "15%",
+					"level_1": "26%",
+					"level_2": "26%",
+					"level_3": "37%",
+					"level_4": ""
+				}
+			]
+		},
+		{
+			"id": 7,
+			"sku": "BEA-ESS-ESS-001",
+			"category": "Top MuleSoft Price List",
+			"categoryId": "1",
+			"name": "Automation-2",
+			"currency": "USD",
+			"description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"discount": 1,
+			"imageUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"thumbnailUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"serviceType": "Subscription",
+			"serviceDuration": "1 Year",
+			"monthlyPrice": 100,
+			"annualPrice": 1000,
+			"tags": ["Gold", "Advanced"],
+			"createdAt": "2025-04-30T09:41:02.053Z",
+			"updatedAt": "2025-04-30T09:41:02.053Z",
+			"productDiscountMatrix": [
+				{
+					"subscribers": "1–9",
+					"level_0": "2.45%",
+					"level_1": "15.67%",
+					"level_2": "25.22%",
+					"level_3": "28.11%",
+					"level_4": "30.11%"
+				},
+				{
+					"subscribers": "10–24",
+					"level_0": "7.11%",
+					"level_1": "18.11%",
+					"level_2": "25.45%",
+					"level_3": "31.56%",
+					"level_4": "40.11%"
+				},
+				{
+					"subscribers": "25–49",
+					"level_0": "9.78%",
+					"level_1": "13.22%",
+					"level_2": "19.33%",
+					"level_3": "27.89%",
+					"level_4": "34%"
+				},
+				{
+					"subscribers": "50–99",
+					"level_0": "15.67%",
+					"level_1": "18.67%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48.78%"
+				},
+				{
+					"subscribers": "100–199",
+					"level_0": "15.67%",
+					"level_1": "26.76%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48%"
+				},
+				{
+					"subscribers": "200–499",
+					"level_0": "15%",
+					"level_1": "26%",
+					"level_2": "26%",
+					"level_3": "37%",
+					"level_4": ""
+				}
+			]
+		},
+		{
+			"id": 2,
+			"sku": "BEA-ESS-ESS-002",
+			"category": "Top MuleSoft Price List",
+			"categoryId": "5",
+			"name": "Flow Automation",
+			"currency": "EUR",
+			"description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"discount": 3,
+			"imageUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"thumbnailUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"serviceType": "Subscription",
+			"serviceDuration": "1 Year",
+			"monthlyPrice": 200,
+			"annualPrice": 2000,
+			"tags": ["Platinum", "Starter"],
+			"createdAt": "2025-04-30T09:41:02.053Z",
+			"updatedAt": "2025-04-30T09:41:02.053Z",
+			"productDiscountMatrix": [
+				{
+					"subscribers": "1–9",
+					"level_0": "2.45%",
+					"level_1": "15.67%",
+					"level_2": "25.22%",
+					"level_3": "28.11%",
+					"level_4": "30.11%"
+				},
+				{
+					"subscribers": "10–24",
+					"level_0": "7.11%",
+					"level_1": "18.11%",
+					"level_2": "25.45%",
+					"level_3": "31.56%",
+					"level_4": "40.11%"
+				},
+				{
+					"subscribers": "25–49",
+					"level_0": "9.78%",
+					"level_1": "13.22%",
+					"level_2": "19.33%",
+					"level_3": "27.89%",
+					"level_4": "34%"
+				},
+				{
+					"subscribers": "50–99",
+					"level_0": "15.67%",
+					"level_1": "18.67%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48.78%"
+				},
+				{
+					"subscribers": "100–199",
+					"level_0": "15.67%",
+					"level_1": "26.76%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48%"
+				},
+				{
+					"subscribers": "200–499",
+					"level_0": "15%",
+					"level_1": "26%",
+					"level_2": "26%",
+					"level_3": "37%",
+					"level_4": ""
+				}
+			]
+		},
+		{
+			"id": 3,
+			"sku": "BEA-ESS-ESS-003",
+			"category": "Top Tableau Price List",
+			"categoryId": "6",
+			"name": "Tableau Creator",
+			"currency": "USD",
+			"description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"discount": 2,
+			"imageUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"thumbnailUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"serviceType": "Subscription",
+			"serviceDuration": "1 Year",
+			"monthlyPrice": 300,
+			"annualPrice": 3000,
+			"tags": ["Gold", "Starter"],
+			"createdAt": "2025-04-30T09:41:02.053Z",
+			"updatedAt": "2025-04-30T09:41:02.053Z",
+			"productDiscountMatrix": [
+				{
+					"subscribers": "1–9",
+					"level_0": "2.45%",
+					"level_1": "15.67%",
+					"level_2": "25.22%",
+					"level_3": "28.11%",
+					"level_4": "30.11%"
+				},
+				{
+					"subscribers": "10–24",
+					"level_0": "7.11%",
+					"level_1": "18.11%",
+					"level_2": "25.45%",
+					"level_3": "31.56%",
+					"level_4": "40.11%"
+				},
+				{
+					"subscribers": "25–49",
+					"level_0": "9.78%",
+					"level_1": "13.22%",
+					"level_2": "19.33%",
+					"level_3": "27.89%",
+					"level_4": "34%"
+				},
+				{
+					"subscribers": "50–99",
+					"level_0": "15.67%",
+					"level_1": "18.67%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48.78%"
+				},
+				{
+					"subscribers": "100–199",
+					"level_0": "15.67%",
+					"level_1": "26.76%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48%"
+				},
+				{
+					"subscribers": "200–499",
+					"level_0": "15%",
+					"level_1": "26%",
+					"level_2": "26%",
+					"level_3": "37%",
+					"level_4": ""
+				}
+			]
+		}
+	],
+	"users": [
+		{
+			"id": "1",
+			"username": "JohnDoe",
+			"email": "john@example.com",
+			"mobile": "987654321",
+			"address": "pune",
+			"password": "password123"
+		}
+	],
+	"dicountInfo": [
+		{
+			"id": 1,
+			"sku": "BEA-ESS-ESS-001",
+			"category": "Top Core Price List",
+			"categoryId": "1",
+			"name": "Automation",
+			"currency": "USD",
+			"description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"discount": 1,
+			"imageUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"thumbnailUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"serviceType": "Subscription",
+			"serviceDuration": "1 Year",
+			"monthlyPrice": 100,
+			"annualPrice": 1000,
+			"tags": ["Gold", "Advanced"],
+			"createdAt": "2025-04-30T09:41:02.053Z",
+			"updatedAt": "2025-04-30T09:41:02.053Z",
+			"productDiscountMatrix": [
+				{
+					"subscribers": "1–9",
+					"level_0": "3.45%",
+					"level_1": "15.67%",
+					"level_2": "24.22%",
+					"level_3": "29.11%",
+					"level_4": "40.11%"
+				},
+				{
+					"subscribers": "10–24",
+					"level_0": "7.11%",
+					"level_1": "18.11%",
+					"level_2": "25.45%",
+					"level_3": "31.56%",
+					"level_4": "40.11%"
+				},
+				{
+					"subscribers": "25–49",
+					"level_0": "9.78%",
+					"level_1": "13.22%",
+					"level_2": "19.33%",
+					"level_3": "27.89%",
+					"level_4": "34%"
+				},
+				{
+					"subscribers": "50–99",
+					"level_0": "15.67%",
+					"level_1": "18.67%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48.78%"
+				},
+				{
+					"subscribers": "100–199",
+					"level_0": "15.67%",
+					"level_1": "26.76%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48%"
+				},
+				{
+					"subscribers": "200–499",
+					"level_0": "15%",
+					"level_1": "26%",
+					"level_2": "26%",
+					"level_3": "37%",
+					"level_4": ""
+				}
+			]
+		},
+		{
+			"id": 2,
+			"sku": "BEA-ESS-ESS-002",
+			"category": "Top MuleSoft Price List",
+			"categoryId": "5",
+			"name": "Flow Automation",
+			"currency": "EUR",
+			"description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+			"discount": 3,
+			"imageUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"thumbnailUrl": "https://cdn.dummyjson.com/product-images/fragrances/dior-j'adore/thumbnail.webp",
+			"serviceType": "Subscription",
+			"serviceDuration": "1 Year",
+			"monthlyPrice": 200,
+			"annualPrice": 2000,
+			"tags": ["Platinum", "Starter"],
+			"createdAt": "2025-04-30T09:41:02.053Z",
+			"updatedAt": "2025-04-30T09:41:02.053Z",
+			"productDiscountMatrix": [
+				{
+					"subscribers": "1–9",
+					"level_0": "2.45%",
+					"level_1": "15.67%",
+					"level_2": "25.22%",
+					"level_3": "28.11%",
+					"level_4": "30.11%"
+				},
+				{
+					"subscribers": "10–24",
+					"level_0": "7.11%",
+					"level_1": "18.11%",
+					"level_2": "25.45%",
+					"level_3": "31.56%",
+					"level_4": "40.11%"
+				},
+				{
+					"subscribers": "25–49",
+					"level_0": "9.78%",
+					"level_1": "13.22%",
+					"level_2": "19.33%",
+					"level_3": "27.89%",
+					"level_4": "34%"
+				},
+				{
+					"subscribers": "50–99",
+					"level_0": "15.67%",
+					"level_1": "18.67%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48.78%"
+				},
+				{
+					"subscribers": "100–199",
+					"level_0": "15.67%",
+					"level_1": "26.76%",
+					"level_2": "26.76%",
+					"level_3": "37.67%",
+					"level_4": "48%"
+				},
+				{
+					"subscribers": "200–499",
+					"level_0": "15%",
+					"level_1": "26%",
+					"level_2": "26%",
+					"level_3": "37%",
+					"level_4": ""
+				}
+			]
+		}
+	]
 }

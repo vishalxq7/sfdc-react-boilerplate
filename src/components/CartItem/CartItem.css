@@ -1,0 +1,30 @@
+.col-product {
+	width: 30%;
+}
+.col-dam {
+	width: 10%;
+}
+
+.col-price {
+	width: 10%;
+}
+.col-qty {
+	width: 10%;
+}
+
+.col-qty-input {
+	width: 50%;
+}
+.col-disc {
+	width: 12%;
+}
+
+.col-disc-price {
+	width: 10%;
+}
+.col-approval {
+	width: 10%;
+}
+.col-cmv {
+	width: 10%;
+}

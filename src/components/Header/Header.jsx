@@ -20,7 +20,7 @@ export const Header = () => {
 
 	return (
 		<header>
-			<nav className="navbar navbar-dark bg-primary px-3">
+			<nav className="navbar navbar-dark bg-primary px-3 mb-5">
 				<a
 					className="navbar-brand"
 					href="#"

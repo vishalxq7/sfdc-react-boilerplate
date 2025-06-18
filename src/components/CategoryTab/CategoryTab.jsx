@@ -1,17 +1,14 @@
-import { useEffect, useState } from 'react';
-import './Home.css';
-import { useTitle } from '../../hooks';
+import React, { useEffect, useState } from 'react';
 import { getCategoriesData } from '../../services/categoryApi';
-import { Loader } from '../../components';
+import { Loader } from '../Loader/Loader';
 
-export const Home = () => {
-	useTitle('Home');
+export const CategoryTab = ({ onSelect }) => {
 	const [categories, setCategories] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		const fetchData = async () => {
+		const fetchCategories = async () => {
 			try {
 				const categoriesData = await getCategoriesData();
 				console.log('Category Data:', categoriesData);
@@ -23,8 +20,7 @@ export const Home = () => {
 				setLoading(false);
 			}
 		};
-
-		fetchData();
+		fetchCategories();
 	}, []);
 
 	if (loading) {
@@ -36,10 +32,14 @@ export const Home = () => {
 	}
 
 	return (
-		<div className="pt-4">
-			<h1>This is Home Component</h1>
-			<p>Category Data</p>
-			<pre>{JSON.stringify(categories, null, 4)}</pre>
-		</div>
+		<ul className="nav nav-tabs">
+			{categories.map((cat) => (
+				<li className="nav-item" key={cat.id}>
+					<button className="nav-link" onClick={() => onSelect(cat.id)}>
+						{cat.name}
+					</button>
+				</li>
+			))}
+		</ul>
 	);
 };

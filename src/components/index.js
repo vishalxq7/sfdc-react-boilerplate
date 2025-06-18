@@ -2,3 +2,8 @@ export { Header } from './Header/Header';
 export { Footer } from './Footer/Footer';
 export { ModalBox } from './ModalBox/ModalBox';
 export { Loader } from './Loader/Loader';
+export { CategoryTab } from './CategoryTab/CategoryTab';
+export { Currency } from './Currency/Currency';
+export { ResourcesButton } from './ResourcesButton/ResourcesButton';
+export { ProductList } from './ProductList/ProductList';
+export { CartItem } from './CartItem/CartItem';

@@ -17,7 +17,8 @@ import { OktaAuth, toRelativeUrl } from '@okta/okta-auth-js';
 import { AuthProvider } from '../context/AuthContext';
 import { oktaConfig } from '../utils/oktaConfig';
 import { Provider } from 'react-redux';
-import store from '../store';
+import { store, persistor } from '../store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 const AppRoutes = () => {
 	const navigate = useNavigate();
@@ -34,26 +35,28 @@ const AppRoutes = () => {
 		<Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri}>
 			<AuthProvider>
 				<Provider store={store}>
-					<Routes>
-						<Route element={<MainLayout />}>
-							<Route path="/login" element={<Login />} />
-							<Route path="/login/callback" element={<LoginCallback />} />
+					<PersistGate loading={null} persistor={persistor}>
+						<Routes>
+							<Route element={<MainLayout />}>
+								<Route path="/login" element={<Login />} />
+								<Route path="/login/callback" element={<LoginCallback />} />
 
-							<Route path="/" element={<Home />} />
-							<Route path="/contact" element={<Contact />} />
-							<Route path="/dashboard" element={<Dashboard />} />
-							<Route path="/profile" element={<Profile />} />
-							<Route path="/cart" element={<Cart />} />
+								<Route path="/" element={<Home />} />
+								<Route path="/contact" element={<Contact />} />
+								<Route path="/dashboard" element={<Dashboard />} />
+								<Route path="/profile" element={<Profile />} />
+								<Route path="/cart" element={<Cart />} />
 
-							{/* <Route element={<ProtectedRoute />}>
+								{/* <Route element={<ProtectedRoute />}>
 							<Route path="/" element={<Home />} />
 							<Route path="/contact" element={<Contact />} />
 							<Route path="/dashboard" element={<Dashboard />} />
 							<Route path="/profile" element={<Profile />} />
 						</Route> */}
-						</Route>
-						<Route path="*" element={<NotFound />} />
-					</Routes>
+							</Route>
+							<Route path="*" element={<NotFound />} />
+						</Routes>
+					</PersistGate>
 				</Provider>
 			</AuthProvider>
 		</Security>
